@@ -28,7 +28,10 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router
+router.post('/logout', (req, res) => {
+  req.session.destroy();
+  res.json({ message: 'Logged out' });
+});
 
 router.get('/me', (req, res) => {
   if (!req.session.user) {
