@@ -14,7 +14,6 @@ app.use(session({
     cookie: { secure: false } // Set to true if using HTTPS
   }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/public')));
 
 function authentication(req, res, next) {
     if(!req.session.user) {
@@ -29,7 +28,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.get('/owner-dashboard', authentication, (req,res) => {
+app.get('/owner-dashboard.html', authentication, (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 
