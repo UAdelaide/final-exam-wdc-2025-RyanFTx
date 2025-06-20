@@ -36,6 +36,6 @@ app.get('/walker-dashboard.html', authentication, (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
-app.use(express.)
+app.use(express.static(path.join(__dirname, 'public')));
 // Export the app instead of listening here
 module.exports = app;
