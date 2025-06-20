@@ -20,7 +20,8 @@ function authentication(role) {
         if(!req.session.user) {
             return res.redirect('/');
         }
-        if(req.sess)
+        if(req.session.user.role !== role) {
+            return res.status(403).send('You')
     next();
 }
 // Routes
