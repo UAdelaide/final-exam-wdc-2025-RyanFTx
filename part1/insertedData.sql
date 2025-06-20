@@ -6,18 +6,18 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ('Gabenewell','gaben@example.com','NumberAfter2','owner');
 
 INSERT INTO Dogs (name, size, owner_id) VALUES
-('Max','medium',(SELECT id FROM users WHERE username = 'alice123')),
-('Bella','small',(SELECT id FROM users WHERE username = 'carol123')),
-('Ledog','medium',(SELECT id FROM users WHERE username = 'Lebronjames')),
-('Alyx','large',(SELECT id FROM users WHERE username = 'Gabenewell')),
-('Speed','small',(SELECT id FROM users WHERE username = 'carol123'));
+('Max','medium',(SELECT id FROM Users WHERE username = 'alice123')),
+('Bella','small',(SELECT id FROM Users WHERE username = 'carol123')),
+('Ledog','medium',(SELECT id FROM Users WHERE username = 'Lebronjames')),
+('Alyx','large',(SELECT id FROM Users WHERE username = 'Gabenewell')),
+('Speed','small',(SELECT id FROM Users WHERE username = 'carol123'));
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
-((SELECT id FROM dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-((SELECT id FROM dogs WHERE name = 'Ledog'), '2025-08-11 10:00:00', 60, 'Hindley St', 'open'),
-((SELECT id FROM dogs WHERE name = 'Alyx'), '2025-08-12 11:00:00', 15, 'Torrens River', 'accepted'),
-((SELECT id FROM dogs WHERE name = 'Speed'), '2025-08-13 12:00:00',25, 'Gotham City', 'open');
+((SELECT id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+((SELECT id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+((SELECT id FROM Dogs WHERE name = 'Ledog'), '2025-08-11 10:00:00', 60, 'Hindley St', 'open'),
+((SELECT id FROM Dogs WHERE name = 'Alyx'), '2025-08-12 11:00:00', 15, 'Torrens River', 'accepted'),
+((SELECT id FROM Dogs WHERE name = 'Speed'), '2025-08-13 12:00:00',25, 'Gotham City', 'open');
 
 
 
