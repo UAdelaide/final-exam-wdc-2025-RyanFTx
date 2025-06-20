@@ -12,7 +12,7 @@ INSERT INTO dogs (name, size, owner_id) VALUES
 ('Alyx','large',(SELECT id FROM users WHERE username = 'Gabenewell')),
 ('Speed','small',(SELECT id FROM users WHERE username = 'carol123'))
 
-INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, status) VALUES
+INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, status) VALUES
 /*
 sers:
 A user with the username alice123,
