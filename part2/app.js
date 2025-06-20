@@ -17,8 +17,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 function authentication(req, res, next) {
     if(!req.session.user) {
-        return res.redirect
+        return res.redirect('/');
     }
+    next();
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
