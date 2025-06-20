@@ -16,9 +16,11 @@ app.use(session({
 app.use(express.json());
 
 function authentication(role) {
-    return (req, res, next) => {if(!req.session.user) {
-        return res.redirect('/');
-    }
+    return (req, res, next) => {
+        if(!req.session.user) {
+            return res.redirect('/');
+        }
+        if(req.sess)
     next();
 }
 // Routes
