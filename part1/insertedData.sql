@@ -21,6 +21,7 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 
 
 
+
 /*
 sers:
 A user with the username alice123,
