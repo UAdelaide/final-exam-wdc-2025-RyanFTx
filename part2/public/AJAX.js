@@ -4,7 +4,7 @@ function sendLogin(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            ;
+            document.getElementById("login-overlay").style.display = "none";
         }
     };
     xhttp.open('POST','/api/users/login',true);
