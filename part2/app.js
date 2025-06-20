@@ -24,7 +24,7 @@ function authentication(role) {
             return res.status(403).send('You are not allowed to access this page');
         }
     next();
-};
+    };
 }
 
 
