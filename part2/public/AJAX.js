@@ -8,6 +8,10 @@ function sendLogin(){
         }
         xhttp.open('POST','/api/users/login',true);
         xhttp.setRequestHeader('Content-Type', 'application/json');
-        xhttp.send(JSON.stringify({username: username, password: password}));
+        xhttp.send(JSON.stringify({ username: username, password: password }));
     };
 }
+
+
+
+
