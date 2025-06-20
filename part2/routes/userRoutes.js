@@ -48,16 +48,13 @@ router.get('/dogs', async (req, res) => {
   }
 
   try {
-    console.log('Session user:', req.session.user);
     const [rows] = await db.query(`
       SELECT dog_id, name, size FROM Dogs
       WHERE owner_id = ?
     `, [req.session.user.user_id]);
 
-    console.log('Dogs found:', rows);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching dogs:', error);
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
