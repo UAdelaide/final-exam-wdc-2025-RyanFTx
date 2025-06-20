@@ -9,7 +9,7 @@ INSERT INTO dogs (name, size, owner_id) VALUES
 ('Max','medium',(SELECT id FROM users WHERE username = 'alice123')),
 ('Bella','small',(SELECT id FROM users WHERE username = 'carol123')),
 ('Ledog','medium',(SELECT id FROM users WHERE username = 'Lebronjames')),
-('Alyx','large')
+('Alyx','large',(SELECT id FROM users WHERE username = 'Gabenewell'))
 
 /*
 sers:
