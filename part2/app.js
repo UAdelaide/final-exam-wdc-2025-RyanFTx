@@ -11,8 +11,8 @@ app.use(session({
     secret: 'secretkey',
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false } // Set to true if using HTTPS
-  }));
+    cookie: { secure: false }
+}));
 app.use(express.json());
 
 function authentication(req, res, next) {
