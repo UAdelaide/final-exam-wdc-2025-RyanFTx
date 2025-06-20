@@ -15,7 +15,7 @@ app.use(session({
 }));
 app.use(express.json());
 
-function authentication(req, res, next) {
+function authentication(role) {
     if(!req.session.user) {
         return res.redirect('/');
     }
