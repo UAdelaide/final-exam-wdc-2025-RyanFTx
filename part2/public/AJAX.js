@@ -13,6 +13,7 @@ function sendLogin(){
 }
 
 function sendLogout(){
+    var xhttp = new XMLHttpRequest();
     
 
 
