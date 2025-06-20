@@ -19,6 +19,7 @@ INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, sta
 ((SELECT id FROM dogs WHERE name = 'Alyx'), '2025-08-12 11:00:00', 15, 'Torrens River', 'accepted'),
 
 
+
 /*
 sers:
 A user with the username alice123,
