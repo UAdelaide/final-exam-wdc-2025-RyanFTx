@@ -32,6 +32,7 @@ app.get('/owner-dashboard', authentication, (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 
-app.get('/walker')
+app.get('/walker-dashboard.html', authentication, (req,res) => {
+    res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 // Export the app instead of listening here
 module.exports = app;
