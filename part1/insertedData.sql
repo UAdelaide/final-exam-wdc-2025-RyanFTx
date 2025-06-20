@@ -2,7 +2,7 @@ INSERT INTO users (username, email. password_hash, role) VALUES
 ('alice123','alice@example.com','hased123','owner')
 ('bobwalker','bob@example..com','hashed456', 'walker')
 ('carol123','carol@example.com','hashed789','owner')
-('LebronJames','le')
+('LebronJames','lemail@example.com','Lepasswor')
 /*
 sers:
 A user with the username alice123,
