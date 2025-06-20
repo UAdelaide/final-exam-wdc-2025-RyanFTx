@@ -1,3 +1,3 @@
-function login(){
-    
+function sendLogin(){
+    var xhttp = new XML
 }
