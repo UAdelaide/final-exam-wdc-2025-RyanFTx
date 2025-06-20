@@ -1,6 +1,6 @@
 INSERT INTO users (username, email. password_hash, role) VALUES
 ('alice123','alice@example.com','hased123','owner')
-('bobwalker')
+('bobwalker','bob@example..com','hashed')
 
 /*
 sers:
