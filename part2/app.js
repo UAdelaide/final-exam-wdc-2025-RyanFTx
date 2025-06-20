@@ -21,8 +21,10 @@ function authentication(role) {
             return res.redirect('/');
         }
         if(req.session.user.role !== role) {
-            return res.status(403).send('You')
+            return res.status(403).send('You are not allowed to access this page');
+        }
     next();
+};
 }
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
