@@ -25,6 +25,8 @@ function authentication(role) {
         }
     next();
 };
+}
+
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
