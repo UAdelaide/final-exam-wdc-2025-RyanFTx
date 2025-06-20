@@ -12,6 +12,8 @@ function sendLogin(){
     xhttp.send(JSON.stringify({ username: username, password: password }));
 }
 
+function sendLogout(){
+    
 
 
 
