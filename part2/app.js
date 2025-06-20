@@ -35,11 +35,11 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.get('/owner-dashboard.html', authentication, (req,res) => {
+app.get('/owner-dashboard.html', authentication('owner'), (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 
-app.get('/walker-dashboard.html', authentication, (req,res) => {
+app.get('/walker-dashboard.html', authentication('walker'), (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
