@@ -20,7 +20,7 @@ function authentication(req, res, next) {
         return res.redirect('/');
     }
     next();
-
+}
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
