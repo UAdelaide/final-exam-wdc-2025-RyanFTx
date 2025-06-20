@@ -1,3 +1,4 @@
 CREATE TABLE USERS {
-    user_id INT AUTO_INCREMENT 
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) 
 }
