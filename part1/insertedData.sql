@@ -6,7 +6,8 @@ INSERT INTO users (username, email. password_hash, role) VALUES
 ('GabeNewell','gaben@example.com','NumberAfter2','owner')
 
 INSERT INTO dogs (name, size, owner_id) VALUES
-('Max','medium')
+('Max','medium',(SELECT id FROM users WHERE username = 'alice123'))
+('')
 /*
 sers:
 A user with the username alice123,
