@@ -3,7 +3,9 @@ INSERT INTO users (username, email. password_hash, role) VALUES
 ('bobwalker','bob@example..com','hashed456', 'walker')
 ('carol123','carol@example.com','hashed789','owner')
 ('LebronJames','lemail@example.com','LeHashed','owner')
-('GabeNewell','gaben@example.com','NumberAfter2')
+('GabeNewell','gaben@example.com','NumberAfter2','owner')
+
+
 /*
 sers:
 A user with the username alice123,
