@@ -19,6 +19,9 @@ function sendLogout(){
             window.location.href = '/';
         }
     };
+    xhttp.open('POST','/api/users/logout',true);
+    xhttp.send();
+}
 
 
 
