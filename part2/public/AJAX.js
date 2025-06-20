@@ -14,7 +14,8 @@ function sendLogin(){
 
 function sendLogout(){
     var xhttp = new XMLHttpRequest();
-    
+    xhttp.onreadystatechange = function() {
+        if ()
 
 
 
