@@ -15,7 +15,10 @@ function sendLogin(){
 function sendLogout(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-        if ()
+        if (this.readyState === 4 && this.status === 200) {
+            window.location.href = '/';
+        }
+    };
 
 
 
