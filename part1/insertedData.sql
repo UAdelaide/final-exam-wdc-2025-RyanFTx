@@ -1,13 +1,15 @@
 INSERT INTO users (username, email. password_hash, role) VALUES
-('alice123','alice@example.com','hased123','owner')
-('bobwalker','bob@example..com','hashed456', 'walker')
-('carol123','carol@example.com','hashed789','owner')
-('LebronJames','lemail@example.com','LeHashed','owner')
-('GabeNewell','gaben@example.com','NumberAfter2','owner')
+('alice123','alice@example.com','hased123','owner'),
+('bobwalker','bob@example..com','hashed456', 'walker'),
+('carol123','carol@example.com','hashed789','owner'),
+('LebronJames','lemail@example.com','LeHashed','owner'),
+('GabeNewell','gaben@example.com','NumberAfter2','owner'),
 
 INSERT INTO dogs (name, size, owner_id) VALUES
-('Max','medium',(SELECT id FROM users WHERE username = 'alice123'))
-('Bella','small',(SELECT id FROM users WHERE 'carol123'))
+('Max','medium',(SELECT id FROM users WHERE username = 'alice123')),
+('Bella','small',(SELECT id FROM users WHERE 'carol123')),
+
+
 /*
 sers:
 A user with the username alice123,
