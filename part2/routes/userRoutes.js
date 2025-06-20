@@ -41,7 +41,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// GET dogs for the logged-in owner
+
 router.get('/dogs', async (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
