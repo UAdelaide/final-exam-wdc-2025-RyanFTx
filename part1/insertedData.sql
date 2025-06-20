@@ -6,11 +6,11 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ('Gabenewell','gaben@example.com','NumberAfter2','owner');
 
 INSERT INTO Dogs (name, size, owner_id) VALUES
-('Max','medium',(SELECT user_idid FROM Users WHERE username = 'alice123')),
-('Bella','small',(SELECT id FROM Users WHERE username = 'carol123')),
-('Ledog','medium',(SELECT id FROM Users WHERE username = 'Lebronjames')),
-('Alyx','large',(SELECT id FROM Users WHERE username = 'Gabenewell')),
-('Speed','small',(SELECT id FROM Users WHERE username = 'carol123'));
+('Max','medium',(SELECT user_id FROM Users WHERE username = 'alice123')),
+('Bella','small',(SELECT user_idiFROM Users WHERE username = 'carol123')),
+('Ledog','medium',(SELECT user_id FROM Users WHERE username = 'Lebronjames')),
+('Alyx','large',(SELECT user_id FROM Users WHERE username = 'Gabenewell')),
+('Speed','small',(SELECT user_id FROM Users WHERE username = 'carol123'));
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
