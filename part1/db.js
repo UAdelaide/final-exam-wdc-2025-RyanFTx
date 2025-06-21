@@ -23,7 +23,8 @@ async function getWalkerSummary(){
     const [walker_username] = await pool.query('SELECT Users.username AS walker_username FROM Users WHERE role = "walker"');
     const [total_ratings] = await pool.query('SELECT COUNT(*) AS total_ratings FROM WalkRatings WHERE walker_id = ?', [walker_username]);
     const [average_rating] = await pool.query('SELECT AVG(rating) AS average_rating FROM WalkRatings WHERE walker_id = ?', [walker_username]);
-    const [completed_walks] = await pool.query('SELECT COUNT(*) AS completed_walks')
+    const [completed_walks] = await pool.query('SELECT COUNT(*) AS completed_walks FROM WalkApplications WHERE walker_id = ? AND status = "accepted"', [walker_username]);
+    
 }
 
 
