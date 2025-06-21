@@ -1,9 +1,9 @@
 function sendLogin(){
     const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value; //gets userbame and password from the sit
-    var xhttp = new XMLHttpRequest();
+    const password = document.getElementById("password").value; //gets the input for username and pass for the site
+    var xhttp = new XMLHttpRequest(); //creates new XMLHttp request
     xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
+        if (this.readyState === 4 && this.status === 200) { //if the ready state if 4 
             document.getElementById("login-overlay").style.display = "none";
         }
     };
