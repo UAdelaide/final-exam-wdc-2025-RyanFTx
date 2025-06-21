@@ -32,5 +32,6 @@ router.get('/api/walkersummary', (req, res) => {
     res.json(walkerSummary);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch walker summary' });
-})
+  }
+});
 module.exports = router;
