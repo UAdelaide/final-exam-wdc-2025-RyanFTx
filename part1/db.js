@@ -14,4 +14,4 @@ async function getDogs(){
     console.log(rows);
 }
 
-module.exports(pool);
+module.exports = pool;
