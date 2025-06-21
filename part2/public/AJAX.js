@@ -7,9 +7,9 @@ function sendLogin(){
             document.getElementById("login-overlay").style.display = "none"; //set login overlay to none
         }
     };
-    xhttp.open('POST','/api/users/login',true);
-    xhttp.setRequestHeader('Content-Type', 'application/json');
-    xhttp.send(JSON.stringify({ username: username, password: password }));
+    xhttp.open('POST','/api/users/login',true); //sends a post request to express routes /api/users/login
+    xhttp.setRequestHeader('Content-Type', 'application/json'); //sets the request to be formatted in json
+    xhttp.send(JSON.stringify({ username: username, password: password })); //sends the request
 }
 
 function sendLogout(){
