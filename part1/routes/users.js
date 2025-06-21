@@ -27,7 +27,7 @@ router.get('/api/walkrequests/open', (req,res) => {
 
 router.get('/api/walkersummary', (req, res) => {
   try{
-    cons
+    const 
   }
 })
 module.exports = router;
