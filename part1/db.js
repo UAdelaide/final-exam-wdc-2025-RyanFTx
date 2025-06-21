@@ -21,7 +21,7 @@ async function getWalkRequests(){
 
 async function getWalkerSummary(){
     const [walker_username] = await pool.query('SELECT Users.username AS walker_username FROM Users WHERE role = "walker"');
-    const [total_ratings] = await pool.query('SELECT COUNT(*) AS total_ratings ')
+    const [total_ratings] = await pool.query('SELECT COUNT(*) AS total_ratings FROM WalkRatings')
 }
 
 
