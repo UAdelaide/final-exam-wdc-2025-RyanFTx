@@ -67,10 +67,10 @@ router.post('/login', async (req, res) => {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
-    `, [username, password]); //used to prevent sql injection, gets the 
+    `, [username, password]); //used to prevent sql injection, gets the user_id and password from the database
 
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' });
+      return res.status(401).json({ error: 'Invalid credentials' }); //this is if the user doesnt exist, a
     }
 
     req.session.user = rows[0];
