@@ -15,7 +15,7 @@ async function getDogs(){
 }
 
 async function getWalkRequests(){
-    const [rows] = await pool.query(SELECT WalkRequests.
+    const [rows] = await pool.query('SELECT WalkRequests.request_id,
 }
 
 getDogs();
