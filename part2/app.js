@@ -15,13 +15,13 @@ app.use(session({
 })); //session setup
 app.use(express.json());
 
-function authentication(role) {
+function authentication(role) { 
     return (req, res, next) => {
         if(!req.session.user) {
             return res.redirect('/');
         }
         if(req.session.user.role !== role) {
-            return res.status(403).send('You are not allowed to access this page');
+            return res.status(403).send('You are not allowed to access this page'); //prevents walkers/owners from accessing sites outside of their access
         }
     next();
     };
