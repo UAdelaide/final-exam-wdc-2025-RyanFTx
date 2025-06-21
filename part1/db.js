@@ -9,4 +9,6 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-module.exports(pool)
+async function
+
+module.exports(pool);
