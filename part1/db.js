@@ -20,7 +20,8 @@ async function getWalkRequests(){
 }
 
 async function getWalkerSummary(){
-    const [walkers] = await pool.query('SELECT Users.username AS walker_username, FROM Users ')
+    const [walkers] = await pool.query('SELECT Users.username AS walker_username FROM Users WHERE role = "walker"');
+    
 }
 
 
