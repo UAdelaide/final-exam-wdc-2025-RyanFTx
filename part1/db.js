@@ -10,8 +10,7 @@ const pool = mysql.createPool({
 });
 
 async function getDogs(){
-    const [rows] = await pool.query('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
-    console.log(rows);
+    const [rows] = await pool.query('SELECT Dogs.name, Dogs.size, Users.username AS owner_name FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
 }
 
 getDogs();
