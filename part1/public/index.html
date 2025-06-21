@@ -34,7 +34,7 @@
                         const res = await fetch('https://dog.ceo/api/breeds/image/random')
                         const data = await res.json();
                         this.dogImage = data.message;
-                    };
+                    },
                     moveButton(){
                         this.loadDog();
                         this.bTop = Math.floor(Math.random() * 200);
