@@ -1,5 +1,5 @@
 function sendLogin(){
-    const username = document.getElementById("username").value;
+    const username = document.getElementById("username").value; 
     const password = document.getElementById("password").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
