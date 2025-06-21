@@ -34,7 +34,7 @@ async function getWalkerSummary(){
     return walkers; //unfortunately only works for one walker as theres only currently one walker, will complete functionality if i have spare time
 }
 
-getWalkerSummary();
+// getWalkerSummary();
 // getDogs();
 // getWalkRequests();
-module.exports = pool;
+module.exports = { pool , ;
