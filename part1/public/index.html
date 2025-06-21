@@ -21,7 +21,13 @@
             <button @click="getDogImage">Click me if you can </button>
         </div>
         <script>
-            const { createApp }
+            const { createApp } = Vue;
+
+            createApp({
+                data(){
+                    dogImage: '';
+                }
+            })
         </script>
 
     </body>
