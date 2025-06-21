@@ -20,7 +20,7 @@ async function getWalkRequests(){
 }
 
 async function getWalkerSummary(){
-    c
+    const [rows] = await pool.query('')
 }
 
 
