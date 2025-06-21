@@ -8,7 +8,14 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/api/dogs', (req, res) => {
-  
-}
+  try {
+    const dogs = getDogs();
+    res.json(dogs);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
+});
+
+
 
 module.exports = router;
