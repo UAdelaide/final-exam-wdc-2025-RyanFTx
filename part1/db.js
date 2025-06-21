@@ -10,7 +10,7 @@ const pool = mysql.createPool({
 });
 
 async function getDogs(){
-    const [rows] = await pool.query('SELECT ')
+    const [rows] = await pool.query('SELECT Dogs.name, Dogs.size, ')
 }
 
 module.exports(pool);
