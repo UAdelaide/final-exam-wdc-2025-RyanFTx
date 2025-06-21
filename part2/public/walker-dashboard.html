@@ -52,7 +52,7 @@
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error('failed to load user');
-            currentUser.value = await res.json();
+            currentUser.value = await res.json(); 
           } catch (err) {
             error.value = err.message;
           }
