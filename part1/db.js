@@ -10,12 +10,12 @@ const pool = mysql.createPool({
 });
 
 async function getDogs(){
-    const [rows] = await pool.query('SELECT Dogs.name, Dogs.size, Users.username AS owner_user name FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
+    const [rows] = await pool.query('SELECT Dogs.name, Dogs.size, Users.username AS owner_username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id');
     return rows;
 }
 
 async function getWalkRequests(){
-    const [rows] = await pool.query('SELECT WalkRequests.request_id, Dogs.name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.name as owner_username
+    const [rows] = await pool.query('SELECT WalkRequests.request_id, Dogs.name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.name as owner_username FROM 
 }
 
 getDogs();
