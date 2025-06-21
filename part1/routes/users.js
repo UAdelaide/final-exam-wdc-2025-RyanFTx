@@ -7,6 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('')
+router.get('/api/dogs', (req, res) => {
+  
+}
 
 module.exports = router;
