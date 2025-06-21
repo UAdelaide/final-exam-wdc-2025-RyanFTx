@@ -19,7 +19,9 @@ async function getWalkRequests(){
     return rows;
 }
 
-async function 
+async function getWalkerSummary(){
+    c
+}
 
 
 // getDogs();
