@@ -19,6 +19,15 @@ router.get('/api/dogs', (req, res) => {
 router.get('/api/walkrequests/open', (req,res) => {
   try{
     const walkRequests = getWalkRequests();
+    res.json(walkRequests);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch walk requests' });
   }
-}
+});
+
+router.get('/api/walkersummary', (req, res) => {
+  try{
+    
+  }
+})
 module.exports = router;
