@@ -9,6 +9,8 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-async function
+async function getDogs(){
+    const [rows]
+}
 
 module.exports(pool);
