@@ -19,7 +19,7 @@ function sendLogout(){
             window.location.href = '/';
         }
     };
-    xhttp.open('POST','/api/users/logout',true); //AJAX function to send a request to logout 
+    xhttp.open('POST','/api/users/logout',true); //AJAX function to send a request to logout route
     xhttp.send();
 }
 
