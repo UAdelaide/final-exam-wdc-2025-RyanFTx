@@ -14,5 +14,9 @@ async function getDogs(){
     return rows;
 }
 
+async function getWalkRequests(){
+    
+}
+
 getDogs();
 module.exports = pool;
