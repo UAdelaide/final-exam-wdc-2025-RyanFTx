@@ -16,6 +16,6 @@ router.get('/api/dogs', (req, res) => {
   }
 });
 
-
+router.get('/api/walk-requests', (req, res) => {
 
 module.exports = router;
