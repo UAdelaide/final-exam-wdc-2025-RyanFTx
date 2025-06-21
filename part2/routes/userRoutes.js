@@ -70,10 +70,10 @@ router.post('/login', async (req, res) => {
     `, [username, password]); //used to prevent sql injection, gets the user_id and password from the database
 
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' }); //this is if the user doesnt exist, a
+      return res.status(401).json({ error: 'Invalid credentials' }); //this is if the user doesnt exist, as if we query a non existing user the password would be null
     }
 
-    req.session.user = rows[0];
+    req.session.user = rows[0]; //creates 
 
     res.json({ message: 'Login successful', user: username });
   } catch (error) {
