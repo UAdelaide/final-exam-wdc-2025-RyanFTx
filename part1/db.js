@@ -31,7 +31,7 @@ async function getWalkerSummary(){
         average_rating: average_rating[0].average_rating,
         completed_walks: completed_walks[0].completed_walks
     });
-    return walkers;
+    return walkers; //unfortunately only works for one walker as theres only currently one walker, will complete functionality if i have spare time
 }
 
 getWalkerSummary();
