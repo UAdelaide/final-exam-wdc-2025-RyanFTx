@@ -12,7 +12,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false }
-}));
+})); //session setup
 app.use(express.json());
 
 function authentication(role) {
