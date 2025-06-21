@@ -1,5 +1,5 @@
 var express = require('express');
-const { getWalkerSummary } = require('../db');
+const { getWalkerSummary , getDogs , getWalkRequests } = require('../db');
 var router = express.Router();
 
 /* GET users listing. */
