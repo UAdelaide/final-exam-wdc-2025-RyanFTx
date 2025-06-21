@@ -37,4 +37,4 @@ async function getWalkerSummary(){
 // getWalkerSummary();
 // getDogs();
 // getWalkRequests();
-module.exports = { pool , getDogs(;
+module.exports = { pool , getDogs, getWalkRequests, getWalkerSummary};
