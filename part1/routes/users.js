@@ -1,4 +1,5 @@
 var express = require('express');
+const { getWalkerSummary } = require('../db');
 var router = express.Router();
 
 /* GET users listing. */
@@ -27,7 +28,9 @@ router.get('/api/walkrequests/open', (req,res) => {
 
 router.get('/api/walkersummary', (req, res) => {
   try{
-    const 
+    const walkerSummary = getWalkerSummary();
+    res.json(walkerSummary);
+  } catch (error) {
   }
 })
 module.exports = router;
