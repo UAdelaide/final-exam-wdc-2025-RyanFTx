@@ -15,7 +15,7 @@ app.use(session({
 })); //session setup
 app.use(express.json());
 
-function authentication(role) { 
+function authentication(role) {
     return (req, res, next) => {
         if(!req.session.user) {
             return res.redirect('/');
@@ -37,7 +37,7 @@ app.use('/api/users', userRoutes);
 
 app.get('/owner-dashboard.html', authentication('owner'), (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
-});
+}); //
 
 app.get('/walker-dashboard.html', authentication('walker'), (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
