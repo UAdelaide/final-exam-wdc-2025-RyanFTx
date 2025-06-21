@@ -15,7 +15,7 @@ async function getDogs(){
 }
 
 async function getWalkRequests(){
-    const [rows] = await pool.query('SELECT WalkRequests.request_id, Dogs.name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.name as owner_username FROM 
+    const [rows] = await pool.query('SELECT WalkRequests.request_id, Dogs.name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.name as owner_username FROM WalkRequests JOIN Dogs ON 
 }
 
 getDogs();
