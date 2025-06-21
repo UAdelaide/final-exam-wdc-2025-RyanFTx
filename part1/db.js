@@ -26,12 +26,11 @@ async function getWalkerSummary(){
     const [completed_walks] = await pool.query('SELECT COUNT(*) AS completed_walks FROM WalkApplications WHERE walker_id = ? AND status = "accepted"', [walker_username.walker_username]);
     const walkers =[];
     walkers.push({
-        walker_username: walker_username.walker_username,
-        total_ratings: total_ratings.total_ratings,
-        average_rating: average_rating.average_rating,
-        completed_walks: completed_walks.completed_walks
+        walker_username: walker_username[0].walker_username,
+        total_ratings: total_ratings[0].total_ratings,
+        average_rating: average_rating[0].average_rating,
+        completed_walks: completed_walks[0].completed_walks
     });
-    console.log(walkers);
     return walkers;
 }
 
