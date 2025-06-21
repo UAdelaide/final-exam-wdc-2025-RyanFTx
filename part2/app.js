@@ -31,9 +31,11 @@ function authentication(role) {
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+const dogRoutes = require('./routes/dogRoutes');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/dogs', dogRoutes);
 
 app.get('/owner-dashboard.html', authentication('owner'), (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
