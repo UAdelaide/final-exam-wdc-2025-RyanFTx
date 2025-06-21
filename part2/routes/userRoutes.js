@@ -73,7 +73,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' }); //this is if the user doesnt exist, as if we query a non existing user the password would be null
     }
 
-    req.session.user = rows[0]; //creates 
+    req.session.user = rows[0]; //creates a session for the user
 
     res.json({ message: 'Login successful', user: username });
   } catch (error) {
