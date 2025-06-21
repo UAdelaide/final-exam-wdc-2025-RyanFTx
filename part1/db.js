@@ -15,7 +15,7 @@ async function getDogs(){
 }
 
 async function getWalkRequests(){
-    
+    const [rows] = await pool.query()
 }
 
 getDogs();
